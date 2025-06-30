@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CoffeeHouse - Landing Page Moderna</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="bg-[#f9f6f1] text-gray-900">
+    <!-- NavBar -->
+    <nav class="flex justify-between items-center px-6 py-4 bg-white bg-opacity-90 sticky top-0 backdrop-blur z-50 shadow-lg">
+      <div class="flex items-center gap-3">
+        <span class="text-2xl font-black uppercase tracking-wide text-[#6e4938]">CoffeeHouse</span>
+        <span class="bg-gradient-to-br from-[#b49c73] via-[#eccfa4] to-[#6e4938] rounded-lg px-2 py-1 text-xs font-bold text-white ml-1">MODERN</span>
+      </div>
+      <ul class="hidden md:flex gap-10 font-semibold">
+        <li><a href="#sobre" class="hover:text-[#b49c73] transition">Sobre nós</a></li>
+        <li><a href="#cardapio" class="hover:text-[#b49c73] transition">Cardápio</a></li>
+        <li><a href="#galeria" class="hover:text-[#b49c73] transition">Galeria</a></li>
+        <li><a href="#depoimentos" class="hover:text-[#b49c73] transition">Depoimentos</a></li>
+        <li><a href="#contato" class="hover:text-[#b49c73] transition">Contato</a></li>
+      </ul>
+      <button class="md:hidden flex items-center" onclick="navToggle()">
+        <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[#6e4938]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </nav>
+    <div id="mobNav" class="md:hidden fixed inset-0 bg-white bg-opacity-95 flex-col items-center justify-center hidden z-40">
+      <button class="absolute top-5 right-8" onclick="navToggle()">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-9 w-9 text-[#6e4938]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+      <ul class="flex flex-col gap-7 text-2xl font-bold mt-24">
+        <li><a onclick="navToggle()" href="#sobre">Sobre nós</a></li>
+        <li><a onclick="navToggle()" href="#cardapio">Cardápio</a></li>
+        <li><a onclick="navToggle()" href="#galeria">Galeria</a></li>
+        <li><a onclick="navToggle()" href="#depoimentos">Depoimentos</a></li>
+        <li><a onclick="navToggle()" href="#contato">Contato</a></li>
+      </ul>
+    </div>
+    
+    <!-- Hero Section -->
+    <section class="hero-bg relative flex items-center justify-center h-[80vh] min-h-[520px] px-6">
+      <div class="max-w-4xl mx-auto glass p-10 flex flex-col items-center shadow-2xl mt-10">
+        <h1 class="text-5xl sm:text-6xl font-black text-[#6e4938] mb-6 text-center drop-shadow">
+          O sabor do café:<br>
+          <span class="text-[#b49c73]">Autoral & Sofisticado</span>
+        </h1>
+        <p class="text-lg sm:text-2xl text-gray-600 mb-10 text-center max-w-2xl">Descubra novas experiências em cada xícara, em um ambiente moderno e aconchegante. Venha viver coffee breaks inesquecíveis na CoffeeHouse.</p>
+        <a href="#contato" class="px-8 py-3 bg-[#6e4938] hover:bg-[#b49c73] text-white rounded-lg font-semibold text-xl transition shadow-lg">Faça sua reserva</a>
+      </div>
+      <img 
+        src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/bfab729f-e179-4ae7-8474-69211e7a827c.png"
+        alt="Foto criativa de bebida de café especial em copo transparente, fundo neutro, estilo minimalista, cores quentes e iluminação natural"
+        class="absolute bottom-[-90px] right-20 w-60 rounded-xl shadow-2xl border-4 border-white hidden lg:block"
+        onerror="this.style.display='none';"
+      />
+    </section>
+
+    <!-- Sobre nós -->
+    <section id="sobre" class="max-w-5xl mx-auto py-24 px-4 flex flex-col md:flex-row items-center gap-10">
+      <div class="flex-1">
+        <img 
+          src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1b41089f-faa4-4808-9272-935555ac8e13.png"
+          alt="Ambiente interno de cafeteria moderna com decoração minimalista, mesas de madeira claro, luminárias sofisticadas e paredes claras"
+          class="rounded-2xl shadow-xl w-full object-cover"
+          onerror="this.style.display='none';"
+        />
+      </div>
+      <div class="flex-1">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-3 text-[#6e4938]">Sobre a CoffeeHouse</h2>
+        <p class="text-lg text-gray-700 mb-7">
+          Somos uma cafeteria para novos tempos: a CoffeeHouse une tecnologia, sustentabilidade e amor por café de alta qualidade. Cultivamos parcerias com pequenos produtores, selecionando apenas grãos especiais para criar momentos únicos — dos clássicos às criações autorais do barista.
+        </p>
+        <ul class="grid grid-cols-1 gap-3 text-gray-600 text-base">
+          <li>• Grãos especiais selecionados manualmente</li>
+          <li>• Wi-fi ultra rápido e ambiente instagramável</li>
+          <li>• Açúcar mascavo, leite vegetal e opções veganas</li>
+          <li>• Atendentes preparados para criar sua experiência</li>
+        </ul>
+      </div>
+    </section>
+    
+    <!-- Cardápio -->
+    <section id="cardapio" class="py-24 px-4 bg-[#f4ece5]">
+      <h2 class="text-4xl font-extrabold text-center text-[#6e4938] mb-16">Nosso Cardápio</h2>
+      <div class="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+        <!-- Card 1 -->
+        <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/90dfb39d-1145-42f8-9905-515092fad816.png" alt="Xícara de café espresso intenso em superfície escura, vapor saindo do café" class="mb-5 rounded-full shadow" onerror="this.style.display='none';"/>
+          <h3 class="text-2xl font-bold text-[#b49c73] mb-2">Espresso</h3>
+          <p class="text-gray-700 mb-1">R$ 7,00</p>
+          <p class="text-gray-600 text-center">Feito em máquina italiana com grãos frescos moídos na hora. Simples e puro.</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f956e445-c209-4ef7-95a2-8b10ceb09883.png" alt="Copão de café latte decorado com arte no leite, xícara sobre mesa de madeira clara, fundo desfocado" class="mb-5 rounded-full shadow" onerror="this.style.display='none';"/>
+          <h3 class="text-2xl font-bold text-[#b49c73] mb-2">Latte Art</h3>
+          <p class="text-gray-700 mb-1">R$ 12,00</p>
+          <p class="text-gray-600 text-center">Café cremoso com leite vaporizado, decorado com arte exclusiva em cada pedido.</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9c012949-1b53-47e7-9bd6-cd8c18a9dfb5.png" alt="Bolo red velvet artesanal decorado com creme branco, servido em prato rústico, luz natural" class="mb-5 rounded-full shadow" onerror="this.style.display='none';"/>
+          <h3 class="text-2xl font-bold text-[#b49c73] mb-2">Red Velvet Slice</h3>
+          <p class="text-gray-700 mb-1">R$ 14,00</p>
+          <p class="text-gray-600 text-center">Fatia de bolo red velvet com creme especial, opção perfeita para harmonizar com seu café favorito.</p>
+        </div>
+      </div>
+      <p class="text-center text-gray-600 mt-10">…e muito mais. Venha conferir nosso menu de bebidas geladas, salgados e sobremesas artesanais!</p>
+    </section>
+
+    <!-- Galeria -->
+    <section id="galeria" class="max-w-6xl mx-auto py-24 px-4">
+      <h2 class="text-4xl font-extrabold text-center text-[#6e4938] mb-16">Galeria CoffeeHouse</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="rounded-xl overflow-hidden shadow-lg">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8e04c749-e895-414a-9d2c-ed6a6f0bdfd7.png" alt="Balcão de cafeteria moderna com barista sorrindo preparando café filtrado" class="w-full h-40 object-cover" onerror="this.style.display='none';"/>
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-lg">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/10c4d759-5dd2-4361-baa3-de13c98683ab.png" alt="Mesa coletiva de madeira clara com laptops de clientes e plantas, ambiente iluminado" class="w-full h-40 object-cover" onerror="this.style.display='none';"/>
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-lg">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9ff9a56b-826a-4910-adb6-88605d0da086.png" alt="Detalhe de xícara de cappuccino com arte no leite vista de cima, sobre mesa bege" class="w-full h-40 object-cover" onerror="this.style.display='none';"/>
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-lg">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/dba21d1f-bc05-4b88-8cee-30277d77362f.png" alt="Luminária dourada pendente sobre balcão de café com plantas verdes decorativas" class="w-full h-40 object-cover" onerror="this.style.display='none';"/>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Depoimentos -->
+    <section id="depoimentos" class="py-24 px-4 bg-[#f4ece5]">
+      <h2 class="text-4xl font-extrabold text-center text-[#6e4938] mb-16">O que nossos clientes dizem</h2>
+      <div class="max-w-4xl mx-auto flex flex-col md:flex-row gap-10">
+        <!-- Depoimento 1 -->
+        <div class="bg-white glass rounded-xl shadow-xl p-8 flex-1">
+          <div class="flex items-center gap-4 mb-3">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c2f496e4-efe8-4d7d-8175-e51a1833dd0b.png" alt="Retrato estilo perfil, mulher jovem sorrindo, cabelo castanho" class="rounded-full w-14 h-14 object-cover" onerror="this.style.display='none';"/>
+            <span>
+              <div class="font-bold text-[#6e4938]">Carla S.</div>
+              <div class="text-xs text-gray-500">Designer</div>
+            </span>
+          </div>
+          <p class="text-gray-700 text-base">Ambiente lindo, wifi excelente! Já virou meu cantinho favorito para trabalhar, tomar café e curtir boas playlists.</p>
+        </div>
+        <!-- Depoimento 2 -->
+        <div class="bg-white glass rounded-xl shadow-xl p-8 flex-1">
+          <div class="flex items-center gap-4 mb-3">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/cdcd230a-9daf-41eb-a45f-78bd352c2a76.png" alt="Retrato estilo perfil, homem com barba, cabelo curto, sorrindo" class="rounded-full w-14 h-14 object-cover" onerror="this.style.display='none';"/>
+            <span>
+              <div class="font-bold text-[#6e4938]">Lucas M.</div>
+              <div class="text-xs text-gray-500">Empreendedor</div>
+            </span>
+          </div>
+          <p class="text-gray-700 text-base">Atendimento impecável e cafés realmente diferenciados. Recomendo o red velvet com capuccino!</p>
+        </div>
+      </div>
+    </section>
+    
+    
+    <section id="contato" class="py-24 px-4">
+      <h2 class="text-4xl font-extrabold text-center text-[#6e4938] mb-12">Entre em contato</h2>
+      <div class="max-w-3xl mx-auto glass p-10 rounded-2xl shadow-xl">
+        <form class="flex flex-col gap-5" onsubmit="event.preventDefault(); showFormSuccess();">
+          <input type="text" required placeholder="Seu nome" class="px-5 py-3 rounded-lg border border-gray-300 focus:border-[#b49c73] focus:outline-none text-lg"/>
+          <input type="email" required placeholder="Seu e-mail" class="px-5 py-3 rounded-lg border border-gray-300 focus:border-[#b49c73] focus:outline-none text-lg"/>
+          <textarea required placeholder="Sua mensagem" rows="4" class="px-5 py-3 rounded-lg border border-gray-300 focus:border-[#b49c73] focus:outline-none text-lg"></textarea>
+          <button type="submit" class="mt-4 bg-[#b49c73] text-white font-bold px-8 py-3 rounded-lg hover:bg-[#6e4938] transition text-lg">Enviar</button>
+        </form>
+        <div id="formSuccess" class="hidden mt-8 text-green-700 font-semibold text-center">Mensagem enviada com sucesso! Em breve entraremos em contato.</div>
+      </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="py-10 text-center bg-[#f9f6f1] text-gray-400 font-medium">
+      © 2024 CoffeeHouse. Desenvolvido por Larissa.
+    </footer>
+    
+    <script src="script.tsx" defer></script>
+  </body>
+</html>
+
